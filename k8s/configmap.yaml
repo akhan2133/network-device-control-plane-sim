@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: control-plane-sim-config
+  namespace: default
+  labels:
+    app: control-plane-sim
+data:
+  config.yaml: |
+    # Control Plane Simulator Configuration
+    ports_count: 8
+    tick_ms: 100
+    flap_probability: 0.01
+    flap_min_ms: 500
+    flap_max_ms: 5000
+    log_level: info
+    http_port: 8080

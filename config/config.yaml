@@ -1,0 +1,24 @@
+# Control Plane Simulator Configuration
+
+# Number of simulated linecard ports
+ports_count: 8
+
+# Simulation tick duration in milliseconds
+# Lower values = faster simulation, higher CPU usage
+tick_ms: 100
+
+# Link flap injection parameters
+# Probability of injecting a link flap per tick per port (0.0 to 1.0)
+flap_probability: 0.01
+
+# Minimum duration of a link flap in milliseconds
+flap_min_ms: 500
+
+# Maximum duration of a link flap in milliseconds
+flap_max_ms: 5000
+
+# Logging level: debug, info, warn, error
+log_level: info
+
+# HTTP server port for /health and /metrics endpoints
+http_port: 8080
