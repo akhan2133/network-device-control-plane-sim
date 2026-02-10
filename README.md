@@ -99,6 +99,7 @@ This simulator models a telecom/optical network device control plane that manage
 - Kubernetes cluster (optional, for deployment)
 
 ### Build Steps
+For a quick local setup, follow the instructions in **[QUICKSTART.md](QUICKSTART.md)**.
 
 ```bash
 # Clone or navigate to the repository
@@ -401,35 +402,6 @@ kubectl get pods -l app=control-plane-sim
 kubectl delete -f k8s/
 ```
 
-## CI/CD with Jenkins
-
-### Jenkinsfile
-
-The project includes a Jenkinsfile with the following stages:
-
-1. **Checkout**: Clone the repository
-2. **Build**: Compile with CMake
-3. **Unit Tests**: Run test suite with CTest
-4. **Integration Test**: Execute integration test script
-5. **Docker Build**: Create container image
-6. **Archive Artifacts**: Store build outputs
-
-### Setting Up Jenkins Pipeline
-
-1. Create a new Pipeline job in Jenkins
-2. Point to your Git repository
-3. Configure to use `Jenkinsfile` from SCM
-4. Ensure Jenkins agent has:
-   - C++ build tools (gcc/g++, cmake)
-   - Docker daemon access
-   - Required permissions
-
-### Pipeline Environment Variables
-
-- `BUILD_NUMBER`: Jenkins build number (used for Docker tagging)
-- `BUILD_DIR`: Build directory (default: `build`)
-- `BINARY_NAME`: Output binary name
-
 ## Structured Logging
 
 All logs are emitted as JSON lines to stdout for easy parsing and ingestion by log aggregation systems (ELK, Splunk, CloudWatch, etc.).
@@ -624,6 +596,6 @@ Common issues:
 
 ## License
 
-This project is provided as-is for educational and demonstration purposes.
+This project is licensed under the [MIT License](LICENSE)
 
 

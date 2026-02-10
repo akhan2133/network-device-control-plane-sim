@@ -229,4 +229,4 @@ sudo systemctl status docker
 2. Explore the source code in `src/` and `include/`
 3. Modify `config/config.yaml` to experiment with different parameters
 4. Check out unit tests in `tests/` for usage examples
-5. Set up Jenkins pipeline using `Jenkinsfile`
+5. Set up your own CI/CD pipeline if needed
