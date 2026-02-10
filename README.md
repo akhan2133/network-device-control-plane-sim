@@ -6,6 +6,13 @@ A C++17 Linux service that simulates a network device control plane managing N l
 
 This simulator models a telecom/optical network device control plane that manages multiple linecard ports. Each port follows a state machine (DOWN -> INIT -> UP) and responds to various events including power-on sequences, initialization completion, link flaps, and heartbeats.
 
+## Getting Started
+
+If you just want to run the simulator quickly (local build, tests, Docker, or Kubernetes),
+start with **[QUICKSTART.md](QUICKSTART.md)**.
+
+This README provides full architectural and operational details.
+
 ### Key Features
 
 - **State Machine**: Deterministic port state transitions (DOWN -> INIT -> UP)
@@ -99,7 +106,6 @@ This simulator models a telecom/optical network device control plane that manage
 - Kubernetes cluster (optional, for deployment)
 
 ### Build Steps
-For a quick local setup, follow the instructions in **[QUICKSTART.md](QUICKSTART.md)**.
 
 ```bash
 # Clone or navigate to the repository
