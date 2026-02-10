@@ -1,14 +1,14 @@
 # Embedded-Style Network Control Plane Simulator
 
-A production-grade C++17 Linux service that simulates a network device control plane managing N linecard ports. Built for deterministic, concurrent, and observable operation with full containerization and Kubernetes support.
+A C++17 Linux service that simulates a network device control plane managing N linecard ports. Built for deterministic, concurrent, and observable operation with full containerization and Kubernetes support.
 
 ## Overview
 
-This simulator models a telecom/optical network device control plane that manages multiple linecard ports. Each port follows a state machine (DOWN → INIT → UP) and responds to various events including power-on sequences, initialization completion, link flaps, and heartbeats.
+This simulator models a telecom/optical network device control plane that manages multiple linecard ports. Each port follows a state machine (DOWN -> INIT -> UP) and responds to various events including power-on sequences, initialization completion, link flaps, and heartbeats.
 
 ### Key Features
 
-- **State Machine**: Deterministic port state transitions (DOWN → INIT → UP)
+- **State Machine**: Deterministic port state transitions (DOWN -> INIT -> UP)
 - **Concurrent Architecture**: Multi-threaded event processing with worker threads
 - **Fault Injection**: Configurable link flap simulation for reliability testing
 - **Observability**: JSON structured logging + Prometheus metrics endpoint
@@ -82,9 +82,9 @@ This simulator models a telecom/optical network device control plane that manage
 - `UP`: Port is operational and processing heartbeats
 
 **Events:**
-- `POWER_ON`: Transitions DOWN → INIT
-- `INIT_COMPLETE`: Transitions INIT → UP
-- `LINK_FLAP`: Transitions any state → DOWN (fault injection)
+- `POWER_ON`: Transitions DOWN -> INIT
+- `INIT_COMPLETE`: Transitions INIT -> UP
+- `LINK_FLAP`: Transitions any state -> DOWN (fault injection)
 - `HEARTBEAT_OK`: Processed in UP state (no transition)
 
 ## Building the Project
